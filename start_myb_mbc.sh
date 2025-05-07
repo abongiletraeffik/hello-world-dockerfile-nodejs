@@ -91,4 +91,8 @@ echo " "
 echo " "
 sleep 2
 
+while true
+do
 node app.js
+sleep 5
+done
